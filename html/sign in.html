@@ -4,53 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/sign in.css">
+    <!-- cdn boxicon -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/signIn-mob.css">
     <title>Login and Sign Up</title>
 </head>
 
 <body>
     <div class="main">
+
+        <!-- desktop setting -->
+        <div class="image-section">
+            <img src="../image/Screenshot from 2024-12-12 20-40-29.png">
+        </div>
+
+        <!-- start form section  -->
+        <div class="form-section">
+
         <input type="checkbox" id="chk" aria-hidden="true">
 
         <!-- Sign Up Section -->
         <div class="signup">
-            <form action="">
-                <label id="signup-label" aria-hidden="true">Sign Up</label>
+            <form id="signup-form" action="#" novalidate>
+                <label id="signup-label" class="signup-label" aria-hidden="true">Sign Up</label>
 
                 <div class="form-group">
+
+                    <label for="fullname" class="fullName">Full Name</label>
                     <!-- Full Name -->
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" placeholder="Enter your full name" class="icon-input" required>
-                    <span class="error-message"></span>
+                     <div class="input-box">
+                    <i class='bx bx-user'></i>
+                    <input type="text" id="fullname" placeholder="Enter your full name" class="fullName" required>
+                </div>
+                    
 
                     <!-- Email Address -->
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="Enter your email" class="icon-input" required>
-                    <span class="error-message"></span>
+                    <div class="input-box">
+                    <i class='bx bx-envelope'></i> 
+                    <input type="email" id="email" placeholder="Enter your email" class="email" required>
+                    </div>
+                    
 
                     <!-- Password Fields -->
-                    <label for="setpassword">Set Password</label>
-                    <div class="password-field">
-                        <input type="password" id="setpassword" placeholder="Set your password" class="icon-input" required>
-                        <span class="toggle-password"><i class="fas fa-eye"></i></span>
-                        <span class="error-message"></span>
+                    <label for="setpassword">Password</label>
+                    <div class="input-box">
+                        <i class='bx bx-lock'></i>
+                        <input type="password" id="setpassword" placeholder="Set your password" class="setpassword" required>
                     </div>
 
-                    <div class="password-field">
-                        <input type="password" id="confirmpassword" placeholder="Confirm your password" class="icon-input" required>
-                        <span class="toggle-password"><i class="fas fa-eye"></i></span>
-                        <span class="error-message"></span>
+                    <div class="input-box ">
+                        <i class='bx bx-lock'></i>
+                        <input type="password" id="confirmpassword" placeholder="Confirm your password" class="setpassword" required>
+                        <span>
                     </div>
                 </div>
 
                 <!-- Sign In Button -->
-                <button type="submit" class="signin-btn">Sign In</button>
+                <button type="submit" class="signin-btn"> 
+                Sign In</button>
 
                 <!-- Links -->
-                <section class="links">
-                    <a href="#" class="forget-password">Forget Password?</a>
-                    <a href="#" class="signup">or Signup</a>
-                </section>
+                <div class="signup-links">
+                    <p href="#" class="forget-password">alredy have an account?
+                    </p>
+                        <a href="#" 
+                        class="check-login" >. login</a>
+                    </div>
 
                 <!-- Footer -->
                 <footer class="terms">
@@ -64,50 +85,54 @@
 
         <!-- Login Section -->
         <div class="login">
-            <form action="#">
+            <form id="login-form" action="#">
                 <label id="login-label" aria-hidden="true">Login</label>
 
                 <div class="form-group">
                     <!-- Email Input -->
                     <label>Email Address</label>
-                    <div class="input-emailpass">
-                        <i class="bx bx-envelope icon"></i>
+                    <div class="input-emailpass input-box">
+                        <i class='bx bx-envelope'></i> 
                         <input type="email" id="email" name="email" placeholder="Enter your email" class="email" required>
                     </div>
 
                     <!-- Password Input -->
                     <label for="password">Password</label>
-                    <div class="input-emailpass">
-                        <i class="bx bx-lock icon"></i>
+                    <div class="input-emailpass input-box">
+                        <i class='bx bx-lock'></i>
                         <input type="password" id="password" placeholder="Enter your password" class="icon-input" required>
                     </div>
                 </div>
 
                 <!-- Sign In Button -->
-                <button type="submit" class="signin-btn">Sign In</button>
+                <button type="submit" class="signin-btn">login</button>
 
                 <!-- Links -->
-                <section class="links">
+                <div class="login-links">
                     <a href="#" class="forget-password">Forget Password?</a>
-                    <a href="#" class="signup">or Signup</a>
-                </section>
+                    <a href="#" class="or-Signup">or Signup</a>
+                </div>
 
                 <!-- Divider -->
                 <div class="divider">
-                    <span>or</span>
+                    <span class="line"></span>
+                   <span>or</span>
+                    <span class="line"></span>
                 </div>
 
                 <!-- Wallet Button -->
                 <button type="button" class="wallet-btn">
-                    <i class="fas fa-credit-card"></i>Login In My Wallet
+                    <i class='bx bx-wallet'></i>Login In My Wallet
                 </button>
 
                 <!-- Footer -->
-                <footer class="terms">
-                    <a href="#">Terms and Conditions</a>
+                <!-- <footer class="terms">
+                    <a href="#" class="forAfter">Terms and Conditions .</a>
                     <a href="#">Privacy Policy</a>
-                </footer>
+                </footer> -->
             </form>
+        </div>
+        <!-- end form section  -->
         </div>
     </div>
 
