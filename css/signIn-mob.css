@@ -14,11 +14,11 @@ body {
     background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
 
-@media (min-width: 869px) {
+@media (min-width: 854px) {
     div.main {
         display: flex;
-        width: 1200px;
-        height: 800px;
+        width: 60%;
+        height: 700px;
         overflow: hidden;
         background: url(../image/Screenshot\ from\ 2024-12-12\ 20-40-29.png) center / cover;
         background-color: red;
@@ -31,14 +31,55 @@ body {
     }
 
     .image-section {
-        width: 50%; 
-        height: 100%;
+        width: 60%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
 
     .image-section img{
         width: 100%;
+        height: 100%;
     }
 
+    .text-container{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.291);
+        backdrop-filter: blur(40px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.76);
+        width: 75%;
+        height: 85%;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.094);
+    }
+
+    .signup-description{
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.8s ease-out;
+    }
+
+    .sign-active{
+        transform: translateX(45px);
+        transition: transform 0.8s ease-in;
+    }
+
+    .login-description{
+        width: 100%;
+        transform: translateX(-400%);
+        transition: transform 0.8s ease-out;
+    }
+    .log-active{
+        transform: translateX(-190px);
+        transition: transform 0.8s ease-in;
+    }
+
+    /* پایان سکشن عکس */
     .form-section {
         width: 50%;
         height: 100%;
@@ -52,7 +93,7 @@ body {
     .form-section .signup{
         display: flex;
         justify-content: center;
-        margin-top: 100px;
+        margin-top: 50px;
         width: 100%;
         position: absolute;
         /* display: none; */
@@ -61,25 +102,23 @@ body {
     }
 
     .form-section .signup form{
-        width: 300px;
+        width: 90%;
     }
  
     .form-section .login{
-        padding-bottom: 20px;
-        padding-left: 200px;
         display: flex;
         justify-content: center;
         width: 100%;
-        position: absolute;
+        /* position: absolute; */
         /* display: none; */
-        margin-top: 100px;
+        margin-top: 50px;
+        height: 100%;
         right: -560px;
         background: #ffffff;
     }
 
     .form-section .login form{
-        width: 300px;
-
+        width: 90%;
     }
 
     /* انیمیشن ها */
@@ -88,12 +127,13 @@ body {
         transform: translateX(0);
         transition: transform 0.8s ease-in;
     }
-    
 
     .login.active {
-        transform: translateX(-660px); */
+        transform: translateX(100%);
         transition: transform 0.8s ease-out;
     }
+
+
     /* ورودی ها */
     .input-box{
     border:1px solid #302b63;
@@ -190,7 +230,6 @@ body {
     form .signup-links{
         display: flex;
         flex-direction: row;
-        justify-content: center;
         margin: 5px 20px 60px;
     }
 
@@ -202,7 +241,7 @@ body {
     }
 
     footer.terms{
-        margin-top: 140px;
+        margin-top: 14px;
         display: flex;
         justify-content: center;
     }
@@ -270,13 +309,13 @@ body {
 
 
 
-/* حالت موبایل  */
+/* حالت تبلت و موبایل  */
 
-@media (max-width:868px) {
+@media (max-width:854px) {
     
 
 div.main {
-    width: 450px;
+    width: 80%;
     height: 700px;
     overflow: hidden;
     background: url(../image/Screenshot\ from\ 2024-12-12\ 20-40-29.png) center / cover;
@@ -315,8 +354,8 @@ label#signup-label{
     padding: 10px 50px;
     width: 100%;
     border-radius: 8px;
-    color:#3b3395;
-    background: #ffffffc2;
+    background: rgba(250, 250, 250, 0.815);
+    backdrop-filter: blur(1px);
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -324,13 +363,12 @@ label#signup-label{
     font-weight: bold;
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    box-shadow: 0px 1px 5px rgb(0, 0, 0);
+    box-shadow: 0px 1px 10px rgb(0, 0, 0);
 }
 
 label#login-label {
     border-radius: 8px;
     color:#3b3395;
-    background: #ffffff6a;
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -351,7 +389,8 @@ label#login-label {
     align-items: center;
     border:1px solid #00000060;
     border-radius: 5px;
-    background: #efefef;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(18px);
     margin: 10px 50px;
 }
 .input-box i{
@@ -391,6 +430,7 @@ button {
     transition: 0.2s ease-in;
     cursor: pointer;
     letter-spacing: 2px;
+    box-shadow:  0 0px 10px black;
 }
 
 .signup button{
@@ -415,6 +455,7 @@ button:hover {
 .login-links .forget-password {
     font-weight: 500;
     text-decoration: none;
+    color: black;
 }
 
     /* انیمیشن ها */
@@ -422,7 +463,8 @@ button:hover {
 .form-section .login {
     overflow: hidden;
     height: 1000px;
-    background: #ffffff;
+    background: rgba(250, 250, 250, 0.815);
+    backdrop-filter: blur(1px);
     border-radius: 100% / 30%;
     transform: translateY(60px);
     transition: 0.8s ease-in-out;
@@ -440,6 +482,8 @@ button:hover {
     box-shadow: 0px 1px 1px 150px rgba(0, 0, 0, 0.411);
     border-radius: 100% / 5%;
     transition: 0.8s ease-in-out;
+    background: rgb(250, 250, 250);
+    backdrop-filter: blur(1px);
 }
 
 .form-section #chk:checked ~ .login label#login-label {
