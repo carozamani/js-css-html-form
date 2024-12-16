@@ -4,128 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- cdn boxicon -->
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
+    <!-- CDN for fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CDN for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <link rel="icon" href="../image/my-logo.png" type="image/png">
+
+    <!-- Link to the CSS file for login and signup form design -->
     <link rel="stylesheet" href="../css/signIn-mob.css">
+   
     <title>Login and Sign Up</title>
 </head>
 
 <body>
     <div class="main">
 
-        <!-- desktop setting -->
+        <!-- Desktop layout settings section -->
         <div class="image-section">
-            <!-- description container  -->
+            <!-- Description section for signup and login -->
             <div class="text-container">
                 <div class="signup-description sign-active">
                 </div>
                 <div class="login-description log-active">
-                    
                 </div>
             </div>
             <img src="../image/Screenshot from 2024-12-12 20-40-29.png" alt="Image description">
         </div>
 
-        <!-- start form section  -->
+        <!-- Login and signup form section -->
         <div class="form-section">
 
-        <input type="checkbox" id="chk" aria-hidden="true">
+            <!-- Control for switching between signup and login forms -->
+            <input type="checkbox" id="chk" aria-hidden="true">
 
-        <!-- Sign Up Section -->
-        <div class="signup">
-            <form id="signup-form" action="#" method="POST" novalidate>
-                <label id="signup-label" class="signup-label" aria-hidden="true">Sign Up</label>
+            <!-- Signup form section -->
+            <div class="signup">
+                <form id="signup-form" action="#" method="POST" novalidate>
+                    <label id="signup-label" class="signup-label" aria-hidden="true">Sign Up</label>
 
-                <div class="form-group">
-                    <label for="fullname" class="fullName" id="fullname-label">Full Name</label>
-                    <div class="input-box">
-                        <i class='bx bx-user'></i>
-                        <input type="text" id="fullname" placeholder="Enter your full name" class="fullName" required aria-labelledby="fullname-label">
+                    <div class="form-group">
+                        <!-- Full name field -->
+                        <label for="fullname" class="fullName" id="fullname-label">Full Name</label>
+                        <div class="input-box">
+                            <i class='bx bx-user'></i>
+                            <input type="text" id="fullname" placeholder="Enter your full name" class="fullName" required aria-labelledby="fullname-label">
+                        </div>
+
+                        <!-- Email field -->
+                        <label for="signup-email">Email Address</label>
+                        <div class="input-box">
+                            <i class='bx bx-envelope'></i> 
+                            <input type="email" id="signup-email" placeholder="Enter your email" class="email" required aria-labelledby="signup-email-label">
+                        </div>
+
+                        <!-- Password field -->
+                        <label for="setpassword" class="setpassword-label">Password</label>
+                        <div class="input-box">
+                            <i class='bx bx-lock'></i>
+                            <input type="password" id="setpassword" placeholder="Set your password" class="setpassword" required>
+                            <i class='bx bx-show toggle-password'></i>
+                        </div>
+
+                        <!-- Confirm password field -->
+                        <div class="input-box">
+                            <i class='bx bx-lock'></i>
+                            <input type="password" id="confirmpassword" placeholder="Confirm your password" class="setpassword" required>
+                            <i class='bx bx-show toggle-password'></i>
+                        </div>
                     </div>
 
-                    <label for="signup-email">Email Address</label>
-                    <div class="input-box">
-                        <i class='bx bx-envelope'></i> 
-                        <input type="email" id="signup-email" placeholder="Enter your email" class="email" required aria-labelledby="signup-email-label">
+                    <!-- Signup form submission button -->
+                    <button type="submit" class="signin-btn"> 
+                    click here</button>
+
+                    <!-- Link for users who already have an account -->
+                    <div class="signup-links">
+                        <p>Already have an account?</p>
+                        <a href="#login" class="check-login">Login</a>
                     </div>
 
-                    <label for="setpassword" class="setpassword-label">Password</label>
-                    <div class="input-box">
-                        <i class='bx bx-lock'></i>
-                        <input type="password" id="setpassword" placeholder="Set your password" class="setpassword" required>
+                    <!-- Terms and privacy section -->
+                    <footer class="terms">
+                        <p>
+                            <a href="#">Terms and Conditions</a>
+                            <a href="#">Privacy Policy</a>
+                        </p>
+                    </footer>
+                </form>
+            </div>
+
+            <!-- Login form section -->
+            <div class="login">
+                <form id="login-form" action="#" method="POST" novalidate>
+                    <label id="login-label" aria-hidden="true">Login</label>
+
+                    <div class="form-group">
+                        <!-- Email field for login -->
+                        <label for="login-email">Email Address</label>
+                        <div class="input-emailpass input-box">
+                            <i class='bx bx-envelope'></i> 
+                            <input type="email" id="login-email" name="email" placeholder="Enter your email" class="email" required aria-labelledby="login-email-label">
+                        </div>
+
+                        <!-- Password field for login -->
+                        <label for="login-password">Password</label>
+                        <div class="input-emailpass input-box">
+                            <i class='bx bx-lock'></i>
+                            <input type="password" id="login-password" name="password" placeholder="Enter your password" class="icon-input" required aria-labelledby="login-password-label">
+                            <i class='bx bx-show toggle-password'></i>
+                        </div>
                     </div>
 
-                    <div class="input-box">
-                        <i class='bx bx-lock'></i>
-                        <input type="password" id="confirmpassword" placeholder="Confirm your password" class="setpassword" required>
-                    </div>
-                </div>
+                    <!-- Login form submission button -->
+                    <button type="submit" class="signin-btn">click for login</button>
 
-                <button type="submit" class="signin-btn"> 
-                Sign Up</button>
-
-                <div class="signup-links">
-                    <p>Already have an account?</p>
-                    <a href="#login" class="check-login">Login</a>
-                </div>
-
-                <footer class="terms">
-                    <p>
-                        <a href="#">Terms and Conditions</a>
-                        <a href="#">Privacy Policy</a>
-                    </p>
-                </footer>
-            </form>
-        </div>
-
-        <!-- Login Section -->
-        <div class="login">
-            <form id="login-form" action="#" method="POST">
-                <label id="login-label" aria-hidden="true">Login</label>
-
-                <div class="form-group">
-                    <label for="login-email">Email Address</label>
-                    <div class="input-emailpass input-box">
-                        <i class='bx bx-envelope'></i> 
-                        <input type="email" id="login-email" name="email" placeholder="Enter your email" class="email" required aria-labelledby="login-email-label">
+                    <!-- Links for forgotten password and signup -->
+                    <div class="login-links">
+                        <a href="#forgot-password" class="forget-password">Forget Password?</a>
+                        <a href="#signup" class="or-Signup">Or Sign Up</a>
                     </div>
 
-                    <label for="login-password">Password</label>
-                    <div class="input-emailpass input-box">
-                        <i class='bx bx-lock'></i>
-                        <input type="password" id="login-password" name="password" placeholder="Enter your password" class="icon-input" required aria-labelledby="login-password-label">
+                    <!-- Divider section -->
+                    <div class="divider">
+                        <span class="line"></span>
+                       <span>or</span>
+                        <span class="line"></span>
                     </div>
-                </div>
 
-                <button type="submit" class="signin-btn">Login</button>
+                    <!-- Wallet login button -->
+                    <button type="button" class="wallet-btn">
+                        <i class='bx bx-wallet'></i> Login In My Wallet
+                    </button>
 
-                <div class="login-links">
-                    <a href="#forgot-password" class="forget-password">Forget Password?</a>
-                    <a href="#signup" class="or-Signup">Or Sign Up</a>
-                </div>
-
-                <div class="divider">
-                    <span class="line"></span>
-                   <span>or</span>
-                    <span class="line"></span>
-                </div>
-
-                <button type="button" class="wallet-btn">
-                    <i class='bx bx-wallet'></i> Login In My Wallet
-                </button>
-
-                <footer class="terms">
-                    <p>
-                        <a href="#">Terms and Conditions</a>
-                        <a href="#">Privacy Policy</a>
-                    </p>
-                </footer>
-            </form>
-        </div>
+                    <!-- Terms and privacy section (commented out) -->
+                    <!-- <footer class="terms">
+                        <p>
+                            <a href="#">Terms and Conditions</a>
+                            <a href="#">Privacy Policy</a>
+                        </p>
+                    </footer> -->
+                </form>
+            </div>
         </div>
     </div>
 
+    <!-- Load the JavaScript file -->
     <script src="../assets/sign in.js"></script>
 </body>
 
