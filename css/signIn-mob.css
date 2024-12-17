@@ -155,10 +155,10 @@ body {
     /* Error handling styles */
     .error-message {
         position: absolute;
-        bottom: -20px;
+        bottom: -15px;
         right: 0;
         color: var(--error);
-        font-size: 12px;
+        font-size: 9px;
         font-weight: bold;
         text-align: left;
         display: none; 
@@ -441,8 +441,12 @@ body {
         border-radius: 5px;
         background: var(--bg);
         backdrop-filter: blur(18px);
-        margin: 5px 50px;
+        margin: 10px 20px;
         position: relative;
+        outline: none;
+    }
+    .signup .input-box:not(:last-child){
+        /* margin: 20px 0; */
     }
 
     .input-box i {
@@ -564,7 +568,7 @@ body {
 
     /* Error handling for input fields on mobile */
     .input-error {
-        border: 2px solid var(--error); 
+        border: 1px solid var(--error); 
     }
 
     .input-error i {
@@ -573,5 +577,6 @@ body {
 
     .error-message {
         display: none !important; 
+        font-size: 8px !important;
     }
 }

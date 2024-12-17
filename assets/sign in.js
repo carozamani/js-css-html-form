@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Validate signup fields
         if (!fullnameInput.value.trim()) {
-            showError(fullnameInput, fullnameError, 'Full Name is required.');
+            showError(fullnameInput, fullnameError, 'This fild is empty.');
             isValid = false;
         } else if (!validateFullnameLength(fullnameInput.value)) {
             showError(fullnameInput, fullnameError, 'Full Name must be 4 to 15 characters.');
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!signupEmailInput.value.trim()) {
-            showError(signupEmailInput, signupEmailError, 'Email is required.');
+            showError(signupEmailInput, signupEmailError, 'This fild is empty.');
             isValid = false;
         } else if (!validateEmail(signupEmailInput.value)) {
             showError(signupEmailInput, signupEmailError, 'Please enter a valid email.');
@@ -192,13 +192,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!setPasswordInput.value.trim()) {
-            showError(setPasswordInput, setPasswordError, 'Password is required.');
+            showError(setPasswordInput, setPasswordError, 'This fild is empty.');
             isValid = false;
         } else if (!validatePasswordLength(setPasswordInput.value)) {
             showError(setPasswordInput, setPasswordError, 'Password must be 4 to 15 characters.');
             isValid = false;
         } else if (!validatePassword(setPasswordInput.value)) {
-            showError(setPasswordInput, setPasswordError, 'Password can only contain letters and numbers.');
+            showError(setPasswordInput, setPasswordError, 'just only enter English letters and numbers.');
             isValid = false;
         }
 
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Validate login fields
         if (!loginEmailInput.value.trim()) {
-            showError(loginEmailInput, loginEmailError, 'Email is required.');
+            showError(loginEmailInput, loginEmailError, 'This fild is empty.');
             isValid = false;
         } else if (!validateEmail(loginEmailInput.value)) {
             showError(loginEmailInput, loginEmailError, 'Please enter a valid email.');
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!loginPasswordInput.value.trim()) {
-            showError(loginPasswordInput, loginPasswordError, 'Password is required.');
+            showError(loginPasswordInput, loginPasswordError, 'This fild is empty.');
             isValid = false;
         } else if (!validatePasswordLength(loginPasswordInput.value)) {
             showError(loginPasswordInput, loginPasswordError, 'Password must be 4 to 15 characters.');
