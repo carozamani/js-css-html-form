@@ -26,12 +26,13 @@ body {
 }
 
 /* Media queries for larger screens (min-width: 742px) */
-@media (min-width: 742px) {
+@media (min-width: 842px) {
 
     /* Main container with background image and flex layout */
     div.main {
         display: flex;
-        width: 80%;
+        /* width: 80%; */
+        margin: 0 100px;
         height: 700px;
         overflow: hidden;
         background: url(../image/Screenshot\ from\ 2024-12-12\ 20-40-29.png) center / cover;
@@ -365,7 +366,7 @@ body {
 }
 
 /* Mobile and tablet styles (max-width: 741px) */
-@media (max-width: 741px) {
+@media (max-width: 841px) {
 
     div.main {
         width: 80%;
@@ -443,7 +444,7 @@ body {
         backdrop-filter: blur(18px);
         margin: 10px 20px;
         position: relative;
-        outline: none;
+          outline: none;
     }
     .signup .input-box:not(:last-child){
         /* margin: 20px 0; */
